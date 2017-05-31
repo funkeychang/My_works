@@ -31,7 +31,9 @@ def start_crawl():
     res = requests.get(beauty_url)
     soup = BeautifulSoup(res.text, "html.parser")
     pbar = ProgressBar()
+    base_dir = os.getcwd()
     dir_name = soup.select('.article-meta-value')[2].text
+
     check_dir(dir_name)
     os.chdir(dir_name)
     #print("now in : " + os.getcwd())
@@ -50,6 +52,7 @@ def start_crawl():
         	del res2
 
     print("Pictures download finished!")
+    os.chdir(base_dir)
 
 if __name__ == '__main__':
     while True:
