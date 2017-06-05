@@ -4,7 +4,8 @@ import operator
 from bs4 import BeautifulSoup
 
 # FB token by graph api
-TOKEN = 'EAACEdEose0cBAK1D8RZB7HZAzWQnCabjob3U9n6WgyMwl0kl0RWuu9bz0k8kCyAJD8fwYtAsdskq9byd6vjjxqHzFlUFblNeJMKWSSwurZB3OjBxRbRkkt7tCRLSZCwhkQ57Xo13gfCE5dUO2Me1XN2vN3ZApH2fZAyrvedA0loxhldZB4PEsczlePhmI4uyPPXBeB8jKoykwZDZD'
+# go to FB graph api and get token
+TOKEN = ''
 
 # GET info from graph.facebook.com/
 res = requests.get('https://graph.facebook.com/v2.9/me/posts?limit=100&access_token=' + TOKEN)
